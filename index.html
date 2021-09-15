@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var today = new Date();
+        //Chỗ này lấy thứ
+        var day = today.getDay() + 1;
+            if (day === 0) {
+                day = "Chủ Nhật"
+            }
+       //Chỗ này lấy giờ
+        var hour = today.getHours();
+       //Chỗ này lấy phút
+        var minute= today.getMinutes();
+     // Chỗ này lấy giây
+        var second= today.getSeconds();
+      // Chỗ này lấy ngày   
+        var dd = String(today.getDate()).padStart(2, '0');
+      // Chỗ này lấy tháng
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+      // Chỗ này lấy năm
+        var yyyy = today.getFullYear();
+      // Chỗ này chính là format để hiện thị  
+       today = "Bây giờ là " + hour + " giờ " + minute + " phút " + minute + " giây ," + " thứ " + day + " ngày " + dd + " tháng " + mm +" năm " + yyyy
+
+     document.write(today);
+    </script>
+</body>
+
+</html>
